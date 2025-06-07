@@ -1,5 +1,7 @@
 # twvault
 
+# Hungarian Translation Project Started!
+
 This is the original, full source code for my Tribal Wars Vault: https://forum.tribalwars.net/index.php?threads/vault.282252/
 
 The public Vault has been taken down but you can host your own Vault. See [this video](https://www.youtube.com/watch?v=IRPJ-ld-3xQ) for a demonstration on deploying it in under 10 minutes on Linode. You'll need to buy a domain name.

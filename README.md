@@ -1,5 +1,7 @@
 # twvault
 
+# Üdvözöljük a Tribal Wars Vault projektben!
+
 # Hungarian Translation Project Started!
 
 This is the original, full source code for my Tribal Wars Vault: https://forum.tribalwars.net/index.php?threads/vault.282252/

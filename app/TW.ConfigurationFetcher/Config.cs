@@ -114,32 +114,32 @@ Options:
 
                           Example: > TW.ConfigurationFetcher ""Server=127.0.0.1; Port=5432; Database=vault; User Id=u_vault; Password=vaulttest""
 
-    -extraserver : Specifies an extra game server (eg en100.tribalwars.net) to be registered, if not done
+    -extraserver : Specifies an extra game server (eg hu1.klanhaboru.hu) to be registered, if not done
                    already. Does not affect ""-fetch-all"".
 
-                   Example: > TW.ConfigurationFetcher ""<connection-string>"" -extraserver en100.tribalwars.net -extraserver us40.tribalwars.us
+                   Example: > TW.ConfigurationFetcher ""<connection-string>"" -extraserver hu1.klanhaboru.hu -extraserver hu2.klanhaboru.hu
 
     -clean       : If specified, will check for old, closed servers and automatically delete their data.
 
-    -fetch-all   : If specified, will gather all TLD servers (eg tribalwars.net, tribalwars.us, ...) and will
-                   automatically register all game servers discovered.
+    -fetch-all   : If specified, will gather all TLD servers (eg klanhaboru.hu) and will
+                   register all servers found under that TLD.
 
                    Example: > TW.ConfigurationFetcher ""<connection-string>"" -fetch-all
 
-                        If ""en100.tribalwars.net"" is already registered, ""tribalwars.net"" would be used
-                        to also find and register ""en101.tribalwars.net"", etc..
+                        If ""hu1.klanhaboru.hu"" is already registered, ""klanhaboru.hu"" would be used
+                        to also find and register ""hu2.klanhaboru.hu"", etc..
 
-    -extraTLD    : Specifies an extra top-level domain of a server (eg tribalwars.net, tribalwars.co.uk)
+    -extraTLD    : Specifies an extra top-level domain of a server (eg klanhaboru.hu)
                    to be used when fetching all available servers. Has no effect when -fetch-all is not used.
 
-                   Example: > TW.ConfigurationFetcher ""<connection-string>"" -fetch-all -extraTLD tribalwars.net -extraTLD tribalwars.us
+                   Example: > TW.ConfigurationFetcher ""<connection-string>"" -fetch-all -extraTLD klanhaboru.hu
 
     -fetch-old   : If specified, will pull configuration for worlds that are already registered and will
                    update their configuration if necessary.
 
                    Example: > TW.ConfigurationFetcher ""<connection-string>"" -fetch-old
                    
-                        If ""en100.tribalwars.net"" is already registered, settings will be pulled from TW and
+                        If ""hu1.klanhaboru.hu"" is already registered, settings will be pulled from TW and
                         compared to the stored settings for that server. If they don't match, a warning will be
                         logged showing the change and will wait for confirmation before overwriting.
 

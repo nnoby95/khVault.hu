@@ -12,6 +12,7 @@ It will:
 - Configure NGINX to provide access to Vault web services
 - Use `certbot` to automatically fetch and configure certs for HTTPS with NGINX
 - Add the tribalwars.net servers to the Vault
+- Add the klanhaboru.hu servers to the Vault
 - Create some helper scripts for configuring the Vault
 - Install the [`micro`](https://micro-editor.github.io/) text editor for convenience
 
@@ -73,11 +74,12 @@ The install script creates utility scripts in the `/vault` folder - `configure.s
 ```bash
 /vault/configure.sh -extraserver en100.tribalwars.net
 /vault/configure.sh -clean
+/vault/configure.sh -extraserver hu1.klanhaboru.hu
 ```
 
 The script will let you review any pending changes before they are applied.
 
-You can use the `fetch-latest-servers.sh` script to automatically fetch the latest servers and remove servers which have been closed. It will fetch all servers for the "TLDs" (eg tribalwars.net, tribalwars.co.uk) that have already been added to the Vault.
+You can use the `fetch-latest-servers.sh` script to automatically fetch the latest servers and remove servers which have been closed. It will fetch all servers for the "TLDs" (eg tribalwars.net, tribalwars.co.uk, klanhaboru.hu) that have already been added to the Vault.
 
 The Vault's map-update service will automatically fetch data for any worlds that were added. It may take ~10 minutes for the Vault to load data for new worlds.
 

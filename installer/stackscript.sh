@@ -197,7 +197,7 @@ chmod +x /vault/configure.sh /vault/configure-help.sh /vault/fetch-latest-server
 # Register the .net TLD server
 ###
 
-/vault/configure.sh -extraTLD tribalwars.net -fetch-all -accept
+/vault/configure.sh -extraTLD klanhaboru.hu -fetch-all -accept
 
 #######################################################
 # Configure Vault programs as services which run on start

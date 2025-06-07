@@ -25,10 +25,10 @@ function makeVaultSupportInfoTab() {
             <hr>
             <h3>Script Legality</h3>
             <p>
-                The Vault script is legal on a variety of servers - see the .net forum thread, which has a list of
+                The Vault script is legal on a variety of servers - see the Hungarian forum thread, which has a list of
                 approved servers:
-                <a href="https://forum.tribalwars.net/index.php?threads/vault.282252/#post-7089474">
-                    https://forum.tribalwars.net/index.php?threads/vault.282252/#post-7089474
+                <a href="https://forum.klanhaboru.hu/index.php?threads/vault.282252/#post-7089474">
+                    https://forum.klanhaboru.hu/index.php?threads/vault.282252/#post-7089474
                 </a>
             </p>
             <hr>
@@ -44,8 +44,8 @@ function makeVaultSupportInfoTab() {
                 To gain access to the Vault on a different world or while in a different tribe, you can use the
                 public registration page available at:
 
-                <a href="https://v.tylercamp.me/register">
-                    https://v.tylercamp.me/register
+                <a href="https://khvault.hu/register">
+                    https://khvault.hu/register
                 </a>
             </p>
             <hr>

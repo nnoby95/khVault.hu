@@ -21,5 +21,5 @@
 }
 
 function alertInvalidBrowser() {
-    alert("Your browser isn't capable of running the Vault, please try again using a recent version of Chrome, Firefox, Safari, or Edge.");
+    alert("A böngésző nem képes futtatni a Vault-ot, kérjük próbálja újra egy újabb verziójú Chrome, Firefox, Safari vagy Edge böngészővel.");
 }

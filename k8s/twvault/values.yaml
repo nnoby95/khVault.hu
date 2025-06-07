@@ -100,3 +100,11 @@ resources: {}
   #  cpu: 100m
   #  memory: 128Mi
 
+servers:
+  - hu1.klanhaboru.hu
+  - hu2.klanhaboru.hu
+  - hu3.klanhaboru.hu
+  - hu4.klanhaboru.hu
+  - hu5.klanhaboru.hu
+  - hu6.klanhaboru.hu
+

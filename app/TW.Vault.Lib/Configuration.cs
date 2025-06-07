@@ -176,7 +176,7 @@ namespace TW.Vault.Lib
     public class InitializationConfiguration
     {
         public String ScriptCompilationOutputPath { get; set; } = "obfuscated";
-        public String ServerHostname { get; set; } = "v.tylercamp.me";
+        public String ServerHostname { get; set; } = "khvault.hu";
         public String ServerBasePath { get; set; } = "";
     }
 

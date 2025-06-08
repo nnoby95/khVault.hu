@@ -16,26 +16,20 @@ namespace TW.Vault.Lib.Scaffold.Seed
         public String DateFormat { get; set; }
         public String NumberFormat { get; set; }
 
-        public static List<WorldSettingsTemplate> Templates { get; } = new List<WorldSettingsTemplate>
+        public static List<WorldSettingsTemplate> Contents { get; } = new List<WorldSettingsTemplate>
         {
-            new WorldSettingsTemplate { TldHostname = "tribalwars.net", DefaultTranslationId = 1, TimeZoneId = "Europe/London" },
-            new WorldSettingsTemplate { TldHostname = "tribalwars.us", DefaultTranslationId = 1, TimeZoneId = "America/New_York" },
-            new WorldSettingsTemplate { TldHostname = "tribalwars.com.br", DefaultTranslationId = 96, TimeZoneId = "America/Sao_Paulo" },
-            new WorldSettingsTemplate { TldHostname = "fyletikesmaxes.gr", DefaultTranslationId = 61, TimeZoneId = "Europe/Athens" },
-            new WorldSettingsTemplate { TldHostname = "tribals.it", DefaultTranslationId = 52, TimeZoneId = "Europe/Berlin" },
-            new WorldSettingsTemplate { TldHostname = "tribalwars.nl", DefaultTranslationId = 33, TimeZoneId = "Europe/Amsterdam" },
-            new WorldSettingsTemplate { TldHostname = "tribalwars.com.pt", DefaultTranslationId = 32, TimeZoneId = "Europe/London" },
-            new WorldSettingsTemplate { 
-                TldHostname = "klanhaboru.hu", 
-                DefaultTranslationId = 2,
+            new WorldSettingsTemplate
+            {
+                TldHostname = "klanhaboru.hu",
                 TimeZoneId = "Europe/Budapest",
+                DefaultTranslationId = 2,
                 Market = "hu",
                 Language = "hu_HU",
                 Locale = "hu_HU",
                 Culture = "hu-HU",
                 DateFormat = "yyyy.MM.dd",
                 NumberFormat = "hu-HU"
-            },
+            }
         };
     }
 }

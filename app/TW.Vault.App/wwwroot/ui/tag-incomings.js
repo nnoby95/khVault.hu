@@ -8,7 +8,7 @@
         %troopName% %tagType% Pop: %popPerc%% Cats: %numCats% Com:1/%numComs%
     `.trim();
 
-    const UNLABELED_TAG_NAME = 'Attack';
+    const UNLABELED_TAG_NAME = lib.translate(lib.itlcodes.COMMANDS_FROM_HERE);
     let rateLimiter = new RateLimiter();
 
     let incomings = [];

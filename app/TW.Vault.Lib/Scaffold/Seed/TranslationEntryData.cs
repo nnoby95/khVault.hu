@@ -503,7 +503,7 @@ namespace TW.Vault.Lib.Scaffold.Seed
             new TranslationEntry { TranslationId = 2, KeyId = 1, Value = "Főhadiszállás" },
             new TranslationEntry { TranslationId = 2, KeyId = 2, Value = "Barakk" },
             new TranslationEntry { TranslationId = 2, KeyId = 3, Value = "Istálló" },
-            new TranslationEntry { TranslationId = 2, KeyId = 4, Value = "Műhely" },
+            new TranslationEntry { TranslationId = 2, KeyId = 4, Value = "Műhely" },  // Restore original building translation
             new TranslationEntry { TranslationId = 2, KeyId = 5, Value = "Templom" },
             new TranslationEntry { TranslationId = 2, KeyId = 6, Value = "Őrtorony" },
             new TranslationEntry { TranslationId = 2, KeyId = 7, Value = "Akadémia" },
@@ -511,7 +511,7 @@ namespace TW.Vault.Lib.Scaffold.Seed
             new TranslationEntry { TranslationId = 2, KeyId = 9, Value = "Gyülekezőhely" },
             new TranslationEntry { TranslationId = 2, KeyId = 10, Value = "Szobor" },
             new TranslationEntry { TranslationId = 2, KeyId = 11, Value = "Piac" },
-            new TranslationEntry { TranslationId = 2, KeyId = 12, Value = "Fatelep" },
+            new TranslationEntry { TranslationId = 2, KeyId = 12, Value = "Fatelep" },  // Restore original building translation
             new TranslationEntry { TranslationId = 2, KeyId = 13, Value = "Agyagbánya" },
             new TranslationEntry { TranslationId = 2, KeyId = 14, Value = "Vasmű" },
             new TranslationEntry { TranslationId = 2, KeyId = 15, Value = "Tanya" },
@@ -544,7 +544,6 @@ namespace TW.Vault.Lib.Scaffold.Seed
             new TranslationEntry { TranslationId = 2, KeyId = 42, Value = "Sikeres" },
             new TranslationEntry { TranslationId = 2, KeyId = 43, Value = "Figyelmeztetés" },
             new TranslationEntry { TranslationId = 2, KeyId = 44, Value = "Mégse" },
-            new TranslationEntry { TranslationId = 2, KeyId = 45, Value = "Mentés" },
             new TranslationEntry { TranslationId = 2, KeyId = 46, Value = "Törlés" },
             new TranslationEntry { TranslationId = 2, KeyId = 47, Value = "Beállítások" },
             new TranslationEntry { TranslationId = 2, KeyId = 48, Value = "Segítség" },
@@ -571,7 +570,51 @@ namespace TW.Vault.Lib.Scaffold.Seed
             new TranslationEntry { TranslationId = 2, KeyId = 69, Value = "Online" },
             new TranslationEntry { TranslationId = 2, KeyId = 70, Value = "Offline" },
             new TranslationEntry { TranslationId = 2, KeyId = 71, Value = "Elérhető" },
-            new TranslationEntry { TranslationId = 2, KeyId = 72, Value = "Nem elérhető" }
+            new TranslationEntry { TranslationId = 2, KeyId = 72, Value = "Nem elérhető" },
+            new TranslationEntry { TranslationId = 2, KeyId = 268, Value = "Mentés" },
+            new TranslationEntry { TranslationId = 2, KeyId = 60, Value = "Mégse" },
+            new TranslationEntry { TranslationId = 2, KeyId = 547, Value = "Beállítások" },
+            new TranslationEntry { TranslationId = 2, KeyId = 17, Value = "Hiba" },
+            new TranslationEntry { TranslationId = 2, KeyId = 42, Value = "Sikeres" },
+            new TranslationEntry { TranslationId = 2, KeyId = 333, Value = "Betöltés" },
+            new TranslationEntry { TranslationId = 2, KeyId = 51, Value = "Szűrő" },
+            new TranslationEntry { TranslationId = 2, KeyId = 52, Value = "Exportálás" },
+            new TranslationEntry { TranslationId = 2, KeyId = 335, Value = "Feltöltés" },
+            new TranslationEntry { TranslationId = 2, KeyId = 12, Value = "Parancs" },
+            new TranslationEntry { TranslationId = 2, KeyId = 20, Value = "Csapatok" },
+            new TranslationEntry { TranslationId = 2, KeyId = 86, Value = "Elküldött" },
+            new TranslationEntry { TranslationId = 2, KeyId = 85, Value = "Érkező" },
+            new TranslationEntry { TranslationId = 2, KeyId = 4, Value = "Időtartam" },
+            new TranslationEntry { TranslationId = 2, KeyId = 3, Value = "Érkezési idő" },
+            new TranslationEntry { TranslationId = 2, KeyId = 21, Value = "Indító" },
+            new TranslationEntry { TranslationId = 2, KeyId = 543, Value = "Cél" },
+            new TranslationEntry { TranslationId = 2, KeyId = 12, Value = "Parancs" },
+            new TranslationEntry { TranslationId = 2, KeyId = 20, Value = "Csapatok" },
+            new TranslationEntry { TranslationId = 2, KeyId = 86, Value = "Elküldött" },
+            new TranslationEntry { TranslationId = 2, KeyId = 85, Value = "Érkező" },
+            new TranslationEntry { TranslationId = 2, KeyId = 4, Value = "Időtartam" },
+            new TranslationEntry { TranslationId = 2, KeyId = 3, Value = "Érkezési idő" },
+            new TranslationEntry { TranslationId = 2, KeyId = 21, Value = "Indító" },
+            new TranslationEntry { TranslationId = 2, KeyId = 543, Value = "Cél" },
+            new TranslationEntry { TranslationId = 2, KeyId = 12, Value = "Parancs" },
+            new TranslationEntry { TranslationId = 2, KeyId = 20, Value = "Csapatok" },
+            new TranslationEntry { TranslationId = 2, KeyId = 86, Value = "Elküldött" },
+            new TranslationEntry { TranslationId = 2, KeyId = 85, Value = "Érkező" },
+            new TranslationEntry { TranslationId = 2, KeyId = 4, Value = "Időtartam" },
+            new TranslationEntry { TranslationId = 2, KeyId = 3, Value = "Érkezési idő" },
+            new TranslationEntry { TranslationId = 2, KeyId = 21, Value = "Indító" },
+            new TranslationEntry { TranslationId = 2, KeyId = 543, Value = "Cél" },
+            new TranslationEntry { TranslationId = 2, KeyId = 97, Value = "Parancs" },        // Command (using KeyId for "Commands")
+            new TranslationEntry { TranslationId = 2, KeyId = 20, Value = "Csapatok" },       // Troops
+            new TranslationEntry { TranslationId = 2, KeyId = 86, Value = "Elküldött" },      // Sent
+            new TranslationEntry { TranslationId = 2, KeyId = 85, Value = "Érkező" },         // Received
+            new TranslationEntry { TranslationId = 2, KeyId = 491, Value = "Időtartam" },     // Duration (using KeyId for "hours")
+            new TranslationEntry { TranslationId = 2, KeyId = 3, Value = "Érkezési idő" },    // Arrival Time
+            new TranslationEntry { TranslationId = 2, KeyId = 21, Value = "Indító" },         // Origin
+            new TranslationEntry { TranslationId = 2, KeyId = 543, Value = "Cél" },           // Destination
+            new TranslationEntry { TranslationId = 2, KeyId = 506, Value = "Parancs" },
+            new TranslationEntry { TranslationId = 2, KeyId = 507, Value = "Parancs innen" },  // Vault - commands from here
+            new TranslationEntry { TranslationId = 2, KeyId = 508, Value = "Parancs" }
         };
     }
 }

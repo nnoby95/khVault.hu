@@ -40,8 +40,12 @@ namespace TW.Vault.App
                 {
                     builder.AllowAnyHeader();
                     builder.AllowAnyMethod();
-                    builder.AllowAnyOrigin();
-                    //builder.AllowCredentials();
+                    builder.SetIsOriginAllowed(origin => 
+                        origin == "https://hu93.klanhaboru.hu" || 
+                        origin == "https://khvault.nnorbert.xyz" ||
+                        origin == "http://hu93.klanhaboru.hu" ||
+                        origin == "http://khvault.nnorbert.xyz"
+                    );
                 });
             });
 

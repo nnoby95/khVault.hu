@@ -101,10 +101,20 @@ resources: {}
   #  memory: 128Mi
 
 servers:
-  - hu1.klanhaboru.hu
-  - hu2.klanhaboru.hu
-  - hu3.klanhaboru.hu
-  - hu4.klanhaboru.hu
-  - hu5.klanhaboru.hu
-  - hu6.klanhaboru.hu
+  - hus1.klanhaboru.hu
+  - huc1.klanhaboru.hu
+  - hup14.klanhaboru.hu
+  - hup15.klanhaboru.hu
+  - hu90.klanhaboru.hu
+  - hu91.klanhaboru.hu
+  - hu92.klanhaboru.hu
+  - hup16.klanhaboru.hu
+  - hu93.klanhaboru.hu
+  - hu94.klanhaboru.hu
+  - hu95.klanhaboru.hu
+  - hu96.klanhaboru.hu
+  - hu97.klanhaboru.hu
+  - hu98.klanhaboru.hu
+  - hu99.klanhaboru.hu
+  - hu100.klanhaboru.hu
 

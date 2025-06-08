@@ -92,16 +92,18 @@ namespace TW.Vault.Lib.Features
                 foreach (var fallbackId in fallbackIds)
                 {
                     if (!loadedFallbacks.ContainsKey(fallbackId))
-                        loadedFallbacks.Add(
-                            fallbackId,
-                            context.TranslationRegistry
+                    {
+                        var fallback = context.TranslationRegistry
                                    .Include(r => r.Entries)
                                    .Where(r => r.Id == fallbackId)
-                                   .First()
-                        );
+                                   .FirstOrDefault();
+                        
+                        if (fallback != null)
+                            loadedFallbacks.Add(fallbackId, fallback);
+                    }
 
-                    var fallback = loadedFallbacks[fallbackId];
-                    yield return fallback;
+                    if (loadedFallbacks.ContainsKey(fallbackId))
+                        yield return loadedFallbacks[fallbackId];
                 }
             }
         }

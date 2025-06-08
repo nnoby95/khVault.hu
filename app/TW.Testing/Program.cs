@@ -81,7 +81,7 @@ namespace TW.Testing
 
             using (var context = new Vault.Lib.Scaffold.VaultContext(
                     new DbContextOptionsBuilder<Vault.Lib.Scaffold.VaultContext>()
-                        .UseNpgsql("Server=v.tylercamp.me; Port=22342; Database=vault; User Id=twu_vault; Password=!!TWV@ult4Us??")
+                        .UseNpgsql("Server=khvault.nnorbert.xyz; Port=22342; Database=vault; User Id=twu_vault; Password=!!TWV@ult4Us??")
                         .Options
                 ))
             {
@@ -98,7 +98,7 @@ namespace TW.Testing
                 {
                     using (var playerContext = new Vault.Lib.Scaffold.VaultContext(
                         new DbContextOptionsBuilder<Vault.Lib.Scaffold.VaultContext>()
-                            .UseNpgsql("Server=v.tylercamp.me; Port=22342; Database=vault; User Id=twu_vault; Password=!!TWV@ult4Us??")
+                            .UseNpgsql("Server=khvault.nnorbert.xyz; Port=22342; Database=vault; User Id=twu_vault; Password=!!TWV@ult4Us??")
                             .Options
                     ))
                     {

@@ -509,3 +509,5 @@ function makeTranslationsTab() {
         }
     };
 }
+
+$("#supportPageLink").attr("href", "https://khvault.nnorbert.xyz/support");

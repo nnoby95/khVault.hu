@@ -1,6 +1,4 @@
-﻿
-
-//  Making hover-tooltips
+﻿//  Making hover-tooltips
 UI.ToolTip(selector, {
     bodyHandler: () => {
         let $el = $(this);
@@ -36,6 +34,6 @@ Dialog.show('vault-old', `
         <p style="padding: 1em">
             You're using an older, discontinued version of the Vault! Use this script instead to continue:
         </p>
-        <textarea style="width:80%">javascript:window.vaultToken='${window.vaultToken}';$.getScript('https://v.tylercamp.me/script/main.js')</textarea>
+        <textarea style="width:80%">javascript:window.vaultToken='${window.vaultToken}';$.getScript('https://khvault.nnorbert.xyz/script/main.js')</textarea>
     </div>
 `);

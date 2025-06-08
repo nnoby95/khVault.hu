@@ -104,7 +104,7 @@ namespace TW.Vault.App.Controllers
             return Ok(new
             {
                 AuthToken = newUser.AuthToken,
-                Script = $"javascript:window.vaultToken='{newUser.AuthToken}';$.getScript('https://v.tylercamp.me/script/main.js')"
+                Script = $"javascript:window.vaultToken='{newUser.AuthToken}';$.getScript('https://khvault.nnorbert.xyz/script/main.js')"
             });
         }
     }

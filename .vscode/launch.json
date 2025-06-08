@@ -15,7 +15,7 @@
            "stopAtEntry": false,
            "launchBrowser": {
                "enabled": true,
-               "args": "https://v.tylercamp.me/dev-glen/script/main.js",
+               "args": "https://khvault.nnorbert.xyz/dev-glen/script/main.js",
                "windows": {
                    "command": "cmd.exe",
                    "args": "/C start ${auto-detect-url}"
@@ -29,7 +29,7 @@
            },
            "env": {
                "ASPNETCORE_ENVIRONMENT": "Development",
-               "ConnectionStrings:Vault": "Server=v.tylercamp.me; Port=22342; Database=vault_dev; User Id=twu_vault; Password=!!TWV@ult4Us??",
+               "ConnectionStrings:Vault": "Server=khvault.nnorbert.xyz; Port=22342; Database=vault_dev; User Id=twu_vault; Password=!!TWV@ult4Us??",
                "Security:MinimumRequiredPriveleges": "3",
                "Serilog:WriteTo:2:Args:configure:0:Args:pathFormat": "../DevLogs/log-{Date}.log"
            }

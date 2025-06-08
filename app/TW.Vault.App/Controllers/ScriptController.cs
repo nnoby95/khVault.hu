@@ -288,7 +288,7 @@ namespace TW.Vault.App.Controllers
             if (originalUrl.Contains("?"))
                 originalUrl = originalUrl.Substring(0, originalUrl.IndexOf('?'));
 
-            String sourceUrlLink = $"//# sourceURL=https://v.tylercamp.me{originalUrl}";
+            String sourceUrlLink = $"//# sourceURL=https://khvault.nnorbert.xyz{originalUrl}";
             scriptContents += ("\n" + sourceUrlLink);
 
             return scriptContents;

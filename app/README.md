@@ -59,7 +59,7 @@ Used to initialize a Postgres database with all necessary schemas, tables, and s
 A tool for automatically fetching config info for Tribal Wars game servers and storing in Vault DB. 
 
 ## TW.Vault.Manage
-Public web interface for generating a new script from the vault, previously exposed at https://v.tylercamp.me/register.
+Public web interface for generating a new script from the vault, previously exposed at https://khvault.nnorbert.xyz/register.
 
 ## TW.Vault.App
 The web server application for the vault. Provides .NET Web API controllers for all endpoints handled by the vault, as well as JavaScript files for the main `vault.js` file that is served.

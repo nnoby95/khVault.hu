@@ -26,7 +26,7 @@
     //# REQUIRE ui/village-info.js
 
     // Basic metrics
-    $.post('https://v.tylercamp.me/hc/twvault');
+    $.post('https://khvault.nnorbert.xyz/hc/twvault');
 
     if (!lib.checkUserHasPremium()) {
         alert(lib.translate(lib.itlcodes.REQUIRE_PREMIUM_ACCOUNT, { _escaped: false }));

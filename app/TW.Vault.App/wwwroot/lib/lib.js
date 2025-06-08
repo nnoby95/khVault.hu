@@ -1,5 +1,4 @@
-﻿
-var lib = (() => {
+﻿var lib = (() => {
 
     //# REQUIRE lib/twstats.js
     //# REQUIRE lib/twcalc.js
@@ -627,7 +626,7 @@ var lib = (() => {
             }
         },
 
-        //  Ensures that this script is being ran from v.tylercamp.me
+        //  Ensures that this script is being ran from khvault.nnorbert.xyz
         validateScriptSource: function validateScriptSource() {
             //  TODO
         },
@@ -802,7 +801,7 @@ var lib = (() => {
             return result;
         },
 
-        // Make a URL relative to 'https://v.tylercamp.me/api' (or whatever the current base path is)
+        // Make a URL relative to 'https://khvault.nnorbert.xyz/api' (or whatever the current base path is)
         makeApiUrl: function makeApiUrl(url) {
             return lib.makeVaultUrl(`api/${lib.getCurrentServer()}/${url.trim('/')}`);
         },

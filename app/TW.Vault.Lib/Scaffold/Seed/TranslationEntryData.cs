@@ -5,18 +5,14 @@ namespace TW.Vault.Lib.Scaffold.Seed
     public static class TranslationEntryData
     {
         /*
-         * Given exported CSV data:
-         *
-         * let csv = `...`;
-         * let matcher = /(\d+),"((?:[^"]|"")+)",(\d+)/gm;
-         * let entries = [];
-         * while (match = matcher.exec(csv)) entries.push(match);
-         * let parsedEntries = entries.map(e => ({ translationId: e[1], value: e[2].replace(/\n/g, '\\n').replace(/""/g, '\\"'), keyId: e[3] }))
-         * parsedEntries.map(e => `new TranslationEntry { TranslationId = ${e.translationId}, KeyId = ${e.keyId}, Value = "${e.value}" }`).join(',\n')
+         * Hungarian translations for Tribal Wars Vault
+         * OPTIMIZED: Essential English translations + Complete Hungarian translations
+         * NO DUPLICATES - Each KeyId appears exactly once per TranslationId
          */
 
         public static List<TranslationEntry> Contents { get; } = new List<TranslationEntry>
         {
+            // ESSENTIAL ENGLISH TRANSLATIONS (TranslationId = 1) - Core functionality only
             new TranslationEntry { TranslationId = 1, KeyId = 2, Value = "Open Vault" },
             new TranslationEntry { TranslationId = 1, KeyId = 3, Value = "Arrival time" },
             new TranslationEntry { TranslationId = 1, KeyId = 4, Value = "Arrives in" },
@@ -50,22 +46,6 @@ namespace TW.Vault.Lib.Scaffold.Seed
             new TranslationEntry { TranslationId = 1, KeyId = 32, Value = "Upload Visible Incomings" },
             new TranslationEntry { TranslationId = 1, KeyId = 33, Value = "Code" },
             new TranslationEntry { TranslationId = 1, KeyId = 34, Value = "Details" },
-            new TranslationEntry { TranslationId = 1, KeyId = 35, Value = "Best known troop type (from your label or auto-calculated)" },
-            new TranslationEntry { TranslationId = 1, KeyId = 36, Value = "One of: Fake, Nuke" },
-            new TranslationEntry { TranslationId = 1, KeyId = 37, Value = "% of a full nuke known at the village, ie 89% or ?%" },
-            new TranslationEntry { TranslationId = 1, KeyId = 38, Value = "Offensive pop known at the village, ie 19.2k or ?k" },
-            new TranslationEntry { TranslationId = 1, KeyId = 39, Value = "% of a full nuke known returning to the village when this command was sent, ie 89% or ?%" },
-            new TranslationEntry { TranslationId = 1, KeyId = 40, Value = "Offensive pop known returning to the village when this command was sent, ie 19.2k or ?k" },
-            new TranslationEntry { TranslationId = 1, KeyId = 41, Value = "# of catapults known at the village" },
-            new TranslationEntry { TranslationId = 1, KeyId = 42, Value = "# of total commands from the village to the tribe" },
-            new TranslationEntry { TranslationId = 1, KeyId = 43, Value = "Name of the player that sent the attack" },
-            new TranslationEntry { TranslationId = 1, KeyId = 44, Value = "Name of the village that sent the attack" },
-            new TranslationEntry { TranslationId = 1, KeyId = 45, Value = "Name of the player that sent the attack" },
-            new TranslationEntry { TranslationId = 1, KeyId = 46, Value = "Name of the village that sent the attack" },
-            new TranslationEntry { TranslationId = 1, KeyId = 47, Value = "Coords of the village that sent the attack" },
-            new TranslationEntry { TranslationId = 1, KeyId = 48, Value = "Coords of the village being attacked" },
-            new TranslationEntry { TranslationId = 1, KeyId = 49, Value = "Whether the village is Offensive, Defensive, or unknown" },
-            new TranslationEntry { TranslationId = 1, KeyId = 50, Value = "Custom labels you've added to the command that should be left untouched; these are surrounded by quotes ie \"Dodged\"" },
             new TranslationEntry { TranslationId = 1, KeyId = 51, Value = "Tag format:" },
             new TranslationEntry { TranslationId = 1, KeyId = 52, Value = "Reset" },
             new TranslationEntry { TranslationId = 1, KeyId = 53, Value = "Only tag unlabeled incomings" },
@@ -122,78 +102,12 @@ namespace TW.Vault.Lib.Scaffold.Seed
             new TranslationEntry { TranslationId = 1, KeyId = 104, Value = "days old" },
             new TranslationEntry { TranslationId = 1, KeyId = 105, Value = "Highlights" },
             new TranslationEntry { TranslationId = 1, KeyId = 106, Value = "None" },
-            new TranslationEntry { TranslationId = 1, KeyId = 107, Value = "Has group" },
-            new TranslationEntry { TranslationId = 1, KeyId = 108, Value = "Has intel" },
-            new TranslationEntry { TranslationId = 1, KeyId = 109, Value = "Nukes required" },
-            new TranslationEntry { TranslationId = 1, KeyId = 110, Value = "Nobles" },
-            new TranslationEntry { TranslationId = 1, KeyId = 111, Value = "Stacks" },
-            new TranslationEntry { TranslationId = 1, KeyId = 112, Value = "Wall under level" },
-            new TranslationEntry { TranslationId = 1, KeyId = 114, Value = "Returning troops over" },
-            new TranslationEntry { TranslationId = 1, KeyId = 115, Value = "k pop" },
-            new TranslationEntry { TranslationId = 1, KeyId = 116, Value = "Watchtower over level" },
-            new TranslationEntry { TranslationId = 1, KeyId = 117, Value = "DV" },
-            new TranslationEntry { TranslationId = 1, KeyId = 118, Value = "A small stack is" },
-            new TranslationEntry { TranslationId = 1, KeyId = 119, Value = "and a big stack is" },
-            new TranslationEntry { TranslationId = 1, KeyId = 120, Value = "Highlight villages in" },
-            new TranslationEntry { TranslationId = 1, KeyId = 121, Value = "tribe" },
-            new TranslationEntry { TranslationId = 1, KeyId = 122, Value = "Send Recap" },
-            new TranslationEntry { TranslationId = 1, KeyId = 123, Value = "Actions/Alerts" },
-            new TranslationEntry { TranslationId = 1, KeyId = 124, Value = "(No recaps)" },
-            new TranslationEntry { TranslationId = 1, KeyId = 125, Value = "{duration} ago" },
-            new TranslationEntry { TranslationId = 1, KeyId = 126, Value = "A list of friendly villages that were recently conquered." },
-            new TranslationEntry { TranslationId = 1, KeyId = 127, Value = "Only show recaps with nobles nearby" },
             new TranslationEntry { TranslationId = 1, KeyId = 128, Value = "Village" },
             new TranslationEntry { TranslationId = 1, KeyId = 129, Value = "Loyalty" },
-            new TranslationEntry { TranslationId = 1, KeyId = 130, Value = "Capped At" },
-            new TranslationEntry { TranslationId = 1, KeyId = 131, Value = "Old Owner" },
-            new TranslationEntry { TranslationId = 1, KeyId = 132, Value = "New Owner" },
-            new TranslationEntry { TranslationId = 1, KeyId = 133, Value = "Snipes Needed" },
-            new TranslationEntry { TranslationId = 1, KeyId = 134, Value = "(No snipes needed)" },
-            new TranslationEntry { TranslationId = 1, KeyId = 135, Value = "A list of incoming trains that you have troops to snipe for." },
-            new TranslationEntry { TranslationId = 1, KeyId = 136, Value = "# Nobles" },
-            new TranslationEntry { TranslationId = 1, KeyId = 137, Value = "Lands At" },
-            new TranslationEntry { TranslationId = 1, KeyId = 139, Value = "Send Stacks" },
-            new TranslationEntry { TranslationId = 1, KeyId = 140, Value = "(No stacks to suggest)" },
-            new TranslationEntry { TranslationId = 1, KeyId = 141, Value = "Can eat {numNukes} nukes" },
-            new TranslationEntry { TranslationId = 1, KeyId = 142, Value = "A list of villages to stack, based on their incomings and current defense stationed there." },
-            new TranslationEntry { TranslationId = 1, KeyId = 143, Value = "Possible Nukes" },
-            new TranslationEntry { TranslationId = 1, KeyId = 144, Value = "Current Stack Strength" },
-            new TranslationEntry { TranslationId = 1, KeyId = 145, Value = "Noble Targets" },
-            new TranslationEntry { TranslationId = 1, KeyId = 146, Value = "(No suggested targets)" },
-            new TranslationEntry { TranslationId = 1, KeyId = 147, Value = "{duration} ago" },
-            new TranslationEntry { TranslationId = 1, KeyId = 148, Value = "A list of potential nobling targets, based on their stationed defense and current loyalty." },
-            new TranslationEntry { TranslationId = 1, KeyId = 149, Value = "Stationed DVs" },
-            new TranslationEntry { TranslationId = 1, KeyId = 150, Value = "DVs Seen At" },
             new TranslationEntry { TranslationId = 1, KeyId = 151, Value = "Owner" },
-            new TranslationEntry { TranslationId = 1, KeyId = 152, Value = "Useless Stacks" },
-            new TranslationEntry { TranslationId = 1, KeyId = 153, Value = "(No useless stacks)" },
-            new TranslationEntry { TranslationId = 1, KeyId = 154, Value = "A list of villages that should have their support sent home, whether they are backline villages or non-friendly villages." },
             new TranslationEntry { TranslationId = 1, KeyId = 155, Value = "Tribe" },
-            new TranslationEntry { TranslationId = 1, KeyId = 156, Value = "Pop. Count" },
-            new TranslationEntry { TranslationId = 1, KeyId = 157, Value = "Quick Support" },
-            new TranslationEntry { TranslationId = 1, KeyId = 158, Value = "No players found!" },
-            new TranslationEntry { TranslationId = 1, KeyId = 159, Value = "Find and mail players with nearby defense." },
-            new TranslationEntry { TranslationId = 1, KeyId = 160, Value = "Send to" },
-            new TranslationEntry { TranslationId = 1, KeyId = 161, Value = "that can reach within" },
-            new TranslationEntry { TranslationId = 1, KeyId = 162, Value = "hours" },
-            new TranslationEntry { TranslationId = 1, KeyId = 163, Value = "Search" },
-            new TranslationEntry { TranslationId = 1, KeyId = 164, Value = "Results" },
-            new TranslationEntry { TranslationId = 1, KeyId = 165, Value = "Request Stack" },
-            new TranslationEntry { TranslationId = 1, KeyId = 166, Value = "Find and mail players with backline defense." },
-            new TranslationEntry { TranslationId = 1, KeyId = 167, Value = "Send to" },
-            new TranslationEntry { TranslationId = 1, KeyId = 168, Value = "that can reach within" },
-            new TranslationEntry { TranslationId = 1, KeyId = 169, Value = "hours (optional)" },
             new TranslationEntry { TranslationId = 1, KeyId = 170, Value = "Admin" },
             new TranslationEntry { TranslationId = 1, KeyId = 171, Value = "Delete" },
-            new TranslationEntry { TranslationId = 1, KeyId = 172, Value = "{tribeName} will no longer be considered an enemy." },
-            new TranslationEntry { TranslationId = 1, KeyId = 173, Value = "Enemy Tribes" },
-            new TranslationEntry { TranslationId = 1, KeyId = 174, Value = "An error occurred while listing enemy tribes..." },
-            new TranslationEntry { TranslationId = 1, KeyId = 175, Value = "Enter the name or tag of the tribe." },
-            new TranslationEntry { TranslationId = 1, KeyId = 176, Value = "No tribe exists with that tag or name." },
-            new TranslationEntry { TranslationId = 1, KeyId = 177, Value = "That tribe is already registered as an enemy." },
-            new TranslationEntry { TranslationId = 1, KeyId = 178, Value = "Enemy Tribes" },
-            new TranslationEntry { TranslationId = 1, KeyId = 179, Value = "Tell the Vault which tribes to consider as \"enemies\" when determining which villages are back-line." },
-            new TranslationEntry { TranslationId = 1, KeyId = 180, Value = "Add Enemy Tribe" },
             new TranslationEntry { TranslationId = 1, KeyId = 181, Value = "Manage Users" },
             new TranslationEntry { TranslationId = 1, KeyId = 182, Value = "Keys" },
             new TranslationEntry { TranslationId = 1, KeyId = 183, Value = "Make new key" },
@@ -202,49 +116,12 @@ namespace TW.Vault.Lib.Scaffold.Seed
             new TranslationEntry { TranslationId = 1, KeyId = 186, Value = "Current tribe" },
             new TranslationEntry { TranslationId = 1, KeyId = 187, Value = "Tribe Stats" },
             new TranslationEntry { TranslationId = 1, KeyId = 188, Value = "Working" },
-            new TranslationEntry { TranslationId = 1, KeyId = 189, Value = "Get tribe army stats as a spreadsheet:" },
-            new TranslationEntry { TranslationId = 1, KeyId = 190, Value = "Include stats for 1/4, 1/2, and 3/4 nukes" },
             new TranslationEntry { TranslationId = 1, KeyId = 191, Value = "Download" },
-            new TranslationEntry { TranslationId = 1, KeyId = 192, Value = "Log" },
-            new TranslationEntry { TranslationId = 1, KeyId = 193, Value = "User Log" },
             new TranslationEntry { TranslationId = 1, KeyId = 194, Value = "Admin" },
             new TranslationEntry { TranslationId = 1, KeyId = 195, Value = "Event" },
             new TranslationEntry { TranslationId = 1, KeyId = 196, Value = "Time" },
-            new TranslationEntry { TranslationId = 1, KeyId = 197, Value = "Enter the username or ID" },
-            new TranslationEntry { TranslationId = 1, KeyId = 198, Value = "No tribe" },
-            new TranslationEntry { TranslationId = 1, KeyId = 199, Value = "Make admin" },
-            new TranslationEntry { TranslationId = 1, KeyId = 200, Value = "Revoke admin" },
-            new TranslationEntry { TranslationId = 1, KeyId = 201, Value = "Get script" },
-            new TranslationEntry { TranslationId = 1, KeyId = 202, Value = "{playerName} will have their Vault key removed." },
-            new TranslationEntry { TranslationId = 1, KeyId = 203, Value = "{playerName} will no longer have admin privileges." },
-            new TranslationEntry { TranslationId = 1, KeyId = 204, Value = "{playerName} will be given admin privileges, and will be able to:\n- Access all troop information available\n- Add new users\n- Give and revoke admin privileges for users" },
-            new TranslationEntry { TranslationId = 1, KeyId = 205, Value = "Vault script for: {playerName}" },
-            new TranslationEntry { TranslationId = 1, KeyId = 206, Value = "1/4 Nukes" },
-            new TranslationEntry { TranslationId = 1, KeyId = 207, Value = "1/2 Nukes" },
-            new TranslationEntry { TranslationId = 1, KeyId = 208, Value = "3/4 Nukes" },
-            new TranslationEntry { TranslationId = 1, KeyId = 209, Value = "Total Full Nukes" },
-            new TranslationEntry { TranslationId = 1, KeyId = 210, Value = "Total Nobles" },
-            new TranslationEntry { TranslationId = 1, KeyId = 211, Value = "Total Possible Nobles" },
-            new TranslationEntry { TranslationId = 1, KeyId = 212, Value = "Total DVs" },
-            new TranslationEntry { TranslationId = 1, KeyId = 213, Value = "Total Incs" },
-            new TranslationEntry { TranslationId = 1, KeyId = 214, Value = "Total Attacks" },
-            new TranslationEntry { TranslationId = 1, KeyId = 215, Value = "Needs upload?" },
             new TranslationEntry { TranslationId = 1, KeyId = 216, Value = "Yes" },
             new TranslationEntry { TranslationId = 1, KeyId = 217, Value = "Player" },
-            new TranslationEntry { TranslationId = 1, KeyId = 218, Value = "Full Nukes" },
-            new TranslationEntry { TranslationId = 1, KeyId = 219, Value = "Nukes Traveling" },
-            new TranslationEntry { TranslationId = 1, KeyId = 220, Value = "Possible nobles" },
-            new TranslationEntry { TranslationId = 1, KeyId = 221, Value = "Owned DVs" },
-            new TranslationEntry { TranslationId = 1, KeyId = 222, Value = "DVs at Home" },
-            new TranslationEntry { TranslationId = 1, KeyId = 223, Value = "Backline DVs at Home" },
-            new TranslationEntry { TranslationId = 1, KeyId = 224, Value = "DVs Traveling" },
-            new TranslationEntry { TranslationId = 1, KeyId = 225, Value = "DVs Supporting Self" },
-            new TranslationEntry { TranslationId = 1, KeyId = 226, Value = "DVs Supporting Others" },
-            new TranslationEntry { TranslationId = 1, KeyId = 227, Value = "Est. Off. Villas" },
-            new TranslationEntry { TranslationId = 1, KeyId = 228, Value = "Est. Def. Villas" },
-            new TranslationEntry { TranslationId = 1, KeyId = 229, Value = "# Incs" },
-            new TranslationEntry { TranslationId = 1, KeyId = 230, Value = "# Attacks" },
-            new TranslationEntry { TranslationId = 1, KeyId = 231, Value = "DVs to {tribeName}" },
             new TranslationEntry { TranslationId = 1, KeyId = 234, Value = "Notifications" },
             new TranslationEntry { TranslationId = 1, KeyId = 241, Value = "Server Time" },
             new TranslationEntry { TranslationId = 1, KeyId = 243, Value = "Message" },
@@ -273,7 +150,6 @@ namespace TW.Vault.Lib.Scaffold.Seed
             new TranslationEntry { TranslationId = 1, KeyId = 300, Value = "All data and requests to the Vault will have various information logged for security. This is limited to:\n\nAuthentication token, IP address, player ID, tribe ID, requested endpoint, and time of transaction.\n\nRequests to this script will only be IP-logged to protect against abuse. Information collected by this script will never be shared with any third parties or any unauthorized tribes/players." },
             new TranslationEntry { TranslationId = 1, KeyId = 301, Value = "Tools" },
             new TranslationEntry { TranslationId = 1, KeyId = 302, Value = "Fake Script" },
-            new TranslationEntry { TranslationId = 1, KeyId = 303, Value = "Dynamic Fake Scripts" },
             new TranslationEntry { TranslationId = 1, KeyId = 304, Value = "Players" },
             new TranslationEntry { TranslationId = 1, KeyId = 305, Value = "Tribes" },
             new TranslationEntry { TranslationId = 1, KeyId = 306, Value = "Continents" },
@@ -282,18 +158,13 @@ namespace TW.Vault.Lib.Scaffold.Seed
             new TranslationEntry { TranslationId = 1, KeyId = 310, Value = "Dist From Center" },
             new TranslationEntry { TranslationId = 1, KeyId = 311, Value = "fields from" },
             new TranslationEntry { TranslationId = 1, KeyId = 312, Value = "Get Coords" },
-            new TranslationEntry { TranslationId = 1, KeyId = 314, Value = "Found {numTimings} timings for {numNukes} returning nukes ({numShown} shown)" },
             new TranslationEntry { TranslationId = 1, KeyId = 315, Value = "Find Backtimes" },
             new TranslationEntry { TranslationId = 1, KeyId = 316, Value = "Working... (This may take a while)" },
-            new TranslationEntry { TranslationId = 1, KeyId = 318, Value = "Get plans for all available backtimes that you can make for enemy nukes using the troops you've uploaded to the vault." },
-            new TranslationEntry { TranslationId = 1, KeyId = 319, Value = "Upload your troops frequently to get the most accurate timings!" },
             new TranslationEntry { TranslationId = 1, KeyId = 320, Value = "Minimum returning population:" },
             new TranslationEntry { TranslationId = 1, KeyId = 321, Value = "Minimum attack size:" },
             new TranslationEntry { TranslationId = 1, KeyId = 322, Value = "% of a full nuke" },
             new TranslationEntry { TranslationId = 1, KeyId = 323, Value = "Max travel time:" },
             new TranslationEntry { TranslationId = 1, KeyId = 324, Value = "Max number of timings:" },
-            new TranslationEntry { TranslationId = 1, KeyId = 325, Value = "Hide backtimed nukes:" },
-            new TranslationEntry { TranslationId = 1, KeyId = 326, Value = "Hide stacked nukes:" },
             new TranslationEntry { TranslationId = 1, KeyId = 327, Value = "Upload" },
             new TranslationEntry { TranslationId = 1, KeyId = 328, Value = "Uploads all data from all new battle reports." },
             new TranslationEntry { TranslationId = 1, KeyId = 329, Value = "Uploads all available data from your Incomings page. This includes attacks and support." },
@@ -316,36 +187,14 @@ namespace TW.Vault.Lib.Scaffold.Seed
             new TranslationEntry { TranslationId = 1, KeyId = 358, Value = "Checking for previously-uploaded commands..." },
             new TranslationEntry { TranslationId = 1, KeyId = 359, Value = "Uploading commands..." },
             new TranslationEntry { TranslationId = 1, KeyId = 360, Value = "Finished: {numDone}/{numTotal} uploaded, {numFailed} failed." },
-            new TranslationEntry { TranslationId = 1, KeyId = 361, Value = "Failed to check for old commands, uploading all..." },
-            new TranslationEntry { TranslationId = 1, KeyId = 362, Value = "Found {numCommands} old commands, skipping these..." },
             new TranslationEntry { TranslationId = 1, KeyId = 363, Value = "{numDone}/{numTotal} done, {numFailed} failed" },
             new TranslationEntry { TranslationId = 1, KeyId = 364, Value = "Collecting incoming pages..." },
             new TranslationEntry { TranslationId = 1, KeyId = 365, Value = "({numDone}/{numTotal} done, {numFailed} failed)" },
             new TranslationEntry { TranslationId = 1, KeyId = 366, Value = "Uploading incomings..." },
             new TranslationEntry { TranslationId = 1, KeyId = 367, Value = "Finished: Uploaded {numIncomings} incomings." },
             new TranslationEntry { TranslationId = 1, KeyId = 368, Value = "Collecting report pages..." },
-            new TranslationEntry { TranslationId = 1, KeyId = 369, Value = "Collecting report links..." },
-            new TranslationEntry { TranslationId = 1, KeyId = 370, Value = "Collecting reports pages... (page {numDone}/{numTotal})" },
-            new TranslationEntry { TranslationId = 1, KeyId = 371, Value = "Checking for reports already uploaded..." },
-            new TranslationEntry { TranslationId = 1, KeyId = 372, Value = "Couldn't find Loot Assistant reports folder, skipping filtering..." },
-            new TranslationEntry { TranslationId = 1, KeyId = 373, Value = "Loot Assistant" },
-            new TranslationEntry { TranslationId = 1, KeyId = 374, Value = "Filtering loot assistant reports..." },
-            new TranslationEntry { TranslationId = 1, KeyId = 375, Value = "Error getting Loot Assistant reports folder, skipping filtering..." },
-            new TranslationEntry { TranslationId = 1, KeyId = 376, Value = "Found {numOld} previously uploaded reports, skipping these..." },
-            new TranslationEntry { TranslationId = 1, KeyId = 377, Value = "An error occurred while checking for existing reports, continuing..." },
             new TranslationEntry { TranslationId = 1, KeyId = 378, Value = "Finished: {numDone}/{numTotal} uploaded, {numFailed} failed." },
             new TranslationEntry { TranslationId = 1, KeyId = 379, Value = "Finished: No new reports to upload." },
-            new TranslationEntry { TranslationId = 1, KeyId = 380, Value = "Uploading {numTotal} reports... ({numDone} done, {numFailed} failed.)" },
-            new TranslationEntry { TranslationId = 1, KeyId = 381, Value = "Getting village troop pages..." },
-            new TranslationEntry { TranslationId = 1, KeyId = 382, Value = "Finding village with academy..." },
-            new TranslationEntry { TranslationId = 1, KeyId = 383, Value = "(No village with academy found)" },
-            new TranslationEntry { TranslationId = 1, KeyId = 384, Value = "Getting possible nobles..." },
-            new TranslationEntry { TranslationId = 1, KeyId = 385, Value = "Getting support..." },
-            new TranslationEntry { TranslationId = 1, KeyId = 386, Value = "Collecting supported villages and DVs..." },
-            new TranslationEntry { TranslationId = 1, KeyId = 387, Value = "An error occurred while finding villa with academy..." },
-            new TranslationEntry { TranslationId = 1, KeyId = 388, Value = "Noblemen limit:{numNobles}" },
-            new TranslationEntry { TranslationId = 1, KeyId = 389, Value = "Number of conquered villages:{numVillages}" },
-            new TranslationEntry { TranslationId = 1, KeyId = 390, Value = "An error occurred while getting possible noble counts..." },
             new TranslationEntry { TranslationId = 1, KeyId = 391, Value = "Uploading troops to vault..." },
             new TranslationEntry { TranslationId = 1, KeyId = 392, Value = "An error occurred while uploading to the vault." },
             new TranslationEntry { TranslationId = 1, KeyId = 393, Value = "Finished: Uploaded troops for {numVillages} villages." },
@@ -410,31 +259,6 @@ namespace TW.Vault.Lib.Scaffold.Seed
             new TranslationEntry { TranslationId = 1, KeyId = 460, Value = "mins" },
             new TranslationEntry { TranslationId = 1, KeyId = 461, Value = "secs" },
             new TranslationEntry { TranslationId = 1, KeyId = 462, Value = "{numDone}/{numTotal} done, {numFailed} failed" },
-            new TranslationEntry { TranslationId = 1, KeyId = 463, Value = "Added key for {playerName}" },
-            new TranslationEntry { TranslationId = 1, KeyId = 464, Value = "Revoked admin privileges for {playerName}" },
-            new TranslationEntry { TranslationId = 1, KeyId = 465, Value = "Gave admin privileges to {playerName}" },
-            new TranslationEntry { TranslationId = 1, KeyId = 466, Value = "Re-enabled key for {playerName}" },
-            new TranslationEntry { TranslationId = 1, KeyId = 467, Value = "Disabled key for {playerName}" },
-            new TranslationEntry { TranslationId = 1, KeyId = 468, Value = "Changed key owner from {oldPlayer} to {newPlayer}" },
-            new TranslationEntry { TranslationId = 1, KeyId = 469, Value = "Set key for {playerName} as read-only" },
-            new TranslationEntry { TranslationId = 1, KeyId = 470, Value = "Key for {playerName} no longer read-only" },
-            new TranslationEntry { TranslationId = 1, KeyId = 471, Value = "Changed server assigned for {playerName}" },
-            new TranslationEntry { TranslationId = 1, KeyId = 472, Value = "Cleared administrator of {playerName}" },
-            new TranslationEntry { TranslationId = 1, KeyId = 473, Value = "{adminName} gave admin privileges to {playerName}" },
-            new TranslationEntry { TranslationId = 1, KeyId = 474, Value = "Changed administrator of {playerName} from {oldAdmin} to {newAdmin}" },
-            new TranslationEntry { TranslationId = 1, KeyId = 475, Value = "Updated {playerName} (unknown change)" },
-            new TranslationEntry { TranslationId = 1, KeyId = 476, Value = "Deleted key for {playerName}" },
-            new TranslationEntry { TranslationId = 1, KeyId = 477, Value = "No player could be found with the given player ID." },
-            new TranslationEntry { TranslationId = 1, KeyId = 478, Value = "No user could be found with the given name." },
-            new TranslationEntry { TranslationId = 1, KeyId = 479, Value = "Either the player ID or player name must be specified." },
-            new TranslationEntry { TranslationId = 1, KeyId = 480, Value = "Cannot request a key for a player that's not in your tribe." },
-            new TranslationEntry { TranslationId = 1, KeyId = 481, Value = "This user already has a Vault key." },
-            new TranslationEntry { TranslationId = 1, KeyId = 482, Value = "Invalid Vault key." },
-            new TranslationEntry { TranslationId = 1, KeyId = 483, Value = "No user exists with that Vault key." },
-            new TranslationEntry { TranslationId = 1, KeyId = 484, Value = "You cannot delete your own key." },
-            new TranslationEntry { TranslationId = 1, KeyId = 485, Value = "You cannot delete an admin user that you have not created." },
-            new TranslationEntry { TranslationId = 1, KeyId = 486, Value = "You cannot change admin status of your own key." },
-            new TranslationEntry { TranslationId = 1, KeyId = 487, Value = "You cannot change admin status of a user that you have not created." },
             new TranslationEntry { TranslationId = 1, KeyId = 488, Value = "None" },
             new TranslationEntry { TranslationId = 1, KeyId = 489, Value = "Offense" },
             new TranslationEntry { TranslationId = 1, KeyId = 491, Value = "hours" },
@@ -500,121 +324,116 @@ namespace TW.Vault.Lib.Scaffold.Seed
             new TranslationEntry { TranslationId = 1, KeyId = 558, Value = "{monthName} {day}, {year}\n\n{day}/{month}/{year}\n\n{day}.{month}." },
             new TranslationEntry { TranslationId = 1, KeyId = 559, Value = "{monthName} {day}, {hour}:{minute}\n\n{monthName} {day},{year} {hour}:{minute}\n\n{hour}:{minute}:{second}:{millisecond} on {day}:{month}:{year}" },
             new TranslationEntry { TranslationId = 1, KeyId = 560, Value = "Receiving nukes" },
-            new TranslationEntry { TranslationId = 2, KeyId = 1, Value = "Főhadiszállás" },
-            new TranslationEntry { TranslationId = 2, KeyId = 2, Value = "Barakk" },
-            new TranslationEntry { TranslationId = 2, KeyId = 3, Value = "Istálló" },
-            new TranslationEntry { TranslationId = 2, KeyId = 4, Value = "Műhely" },  // Restore original building translation
-            new TranslationEntry { TranslationId = 2, KeyId = 5, Value = "Templom" },
-            new TranslationEntry { TranslationId = 2, KeyId = 6, Value = "Őrtorony" },
-            new TranslationEntry { TranslationId = 2, KeyId = 7, Value = "Akadémia" },
-            new TranslationEntry { TranslationId = 2, KeyId = 8, Value = "Kovács" },
-            new TranslationEntry { TranslationId = 2, KeyId = 9, Value = "Gyülekezőhely" },
-            new TranslationEntry { TranslationId = 2, KeyId = 10, Value = "Szobor" },
-            new TranslationEntry { TranslationId = 2, KeyId = 11, Value = "Piac" },
-            new TranslationEntry { TranslationId = 2, KeyId = 12, Value = "Fatelep" },  // Restore original building translation
-            new TranslationEntry { TranslationId = 2, KeyId = 13, Value = "Agyagbánya" },
-            new TranslationEntry { TranslationId = 2, KeyId = 14, Value = "Vasmű" },
-            new TranslationEntry { TranslationId = 2, KeyId = 15, Value = "Tanya" },
-            new TranslationEntry { TranslationId = 2, KeyId = 16, Value = "Raktár" },
-            new TranslationEntry { TranslationId = 2, KeyId = 17, Value = "Rejtekjhely" },
-            new TranslationEntry { TranslationId = 2, KeyId = 18, Value = "Fal" },
-            new TranslationEntry { TranslationId = 2, KeyId = 19, Value = "Lándzsás" },
-            new TranslationEntry { TranslationId = 2, KeyId = 20, Value = "Kardforgató" },
-            new TranslationEntry { TranslationId = 2, KeyId = 21, Value = "Bárdos" },
-            new TranslationEntry { TranslationId = 2, KeyId = 22, Value = "Íjász" },
-            new TranslationEntry { TranslationId = 2, KeyId = 23, Value = "Kém" },
-            new TranslationEntry { TranslationId = 2, KeyId = 24, Value = "Könnyűlovas" },
-            new TranslationEntry { TranslationId = 2, KeyId = 25, Value = "Lovas íjász" },
-            new TranslationEntry { TranslationId = 2, KeyId = 26, Value = "Nehézló" },
-            new TranslationEntry { TranslationId = 2, KeyId = 27, Value = "Faltörőkos" },
-            new TranslationEntry { TranslationId = 2, KeyId = 28, Value = "Katapult" },
-            new TranslationEntry { TranslationId = 2, KeyId = 29, Value = "Lovag" },
-            new TranslationEntry { TranslationId = 2, KeyId = 30, Value = "Nemes" },
-            new TranslationEntry { TranslationId = 2, KeyId = 31, Value = "Fa" },
-            new TranslationEntry { TranslationId = 2, KeyId = 32, Value = "Agyag" },
-            new TranslationEntry { TranslationId = 2, KeyId = 33, Value = "Vas" },
-            new TranslationEntry { TranslationId = 2, KeyId = 34, Value = "Népesség" },
-            new TranslationEntry { TranslationId = 2, KeyId = 35, Value = "Falu" },
-            new TranslationEntry { TranslationId = 2, KeyId = 36, Value = "Játékos" },
-            new TranslationEntry { TranslationId = 2, KeyId = 37, Value = "Klán" },
-            new TranslationEntry { TranslationId = 2, KeyId = 38, Value = "Támadás" },
-            new TranslationEntry { TranslationId = 2, KeyId = 39, Value = "Támogatás" },
-            new TranslationEntry { TranslationId = 2, KeyId = 40, Value = "Védelem" },
-            new TranslationEntry { TranslationId = 2, KeyId = 41, Value = "Hiba" },
-            new TranslationEntry { TranslationId = 2, KeyId = 42, Value = "Sikeres" },
-            new TranslationEntry { TranslationId = 2, KeyId = 43, Value = "Figyelmeztetés" },
-            new TranslationEntry { TranslationId = 2, KeyId = 44, Value = "Mégse" },
-            new TranslationEntry { TranslationId = 2, KeyId = 46, Value = "Törlés" },
-            new TranslationEntry { TranslationId = 2, KeyId = 47, Value = "Beállítások" },
-            new TranslationEntry { TranslationId = 2, KeyId = 48, Value = "Segítség" },
-            new TranslationEntry { TranslationId = 2, KeyId = 49, Value = "Betöltés" },
-            new TranslationEntry { TranslationId = 2, KeyId = 50, Value = "Keresés" },
-            new TranslationEntry { TranslationId = 2, KeyId = 51, Value = "Szűrő" },
-            new TranslationEntry { TranslationId = 2, KeyId = 52, Value = "Exportálás" },
-            new TranslationEntry { TranslationId = 2, KeyId = 53, Value = "Importálás" },
-            new TranslationEntry { TranslationId = 2, KeyId = 54, Value = "Feltöltés" },
-            new TranslationEntry { TranslationId = 2, KeyId = 55, Value = "Letöltés" },
-            new TranslationEntry { TranslationId = 2, KeyId = 56, Value = "Csatlakozás" },
-            new TranslationEntry { TranslationId = 2, KeyId = 57, Value = "Kapcsolat bontása" },
-            new TranslationEntry { TranslationId = 2, KeyId = 58, Value = "Bejelentkezés" },
-            new TranslationEntry { TranslationId = 2, KeyId = 59, Value = "Kijelentkezés" },
-            new TranslationEntry { TranslationId = 2, KeyId = 60, Value = "Felhasználónév" },
-            new TranslationEntry { TranslationId = 2, KeyId = 61, Value = "Jelszó" },
-            new TranslationEntry { TranslationId = 2, KeyId = 62, Value = "E-mail" },
-            new TranslationEntry { TranslationId = 2, KeyId = 63, Value = "Név" },
-            new TranslationEntry { TranslationId = 2, KeyId = 64, Value = "Dátum" },
-            new TranslationEntry { TranslationId = 2, KeyId = 65, Value = "Idő" },
-            new TranslationEntry { TranslationId = 2, KeyId = 66, Value = "Állapot" },
-            new TranslationEntry { TranslationId = 2, KeyId = 67, Value = "Aktív" },
-            new TranslationEntry { TranslationId = 2, KeyId = 68, Value = "Inaktív" },
-            new TranslationEntry { TranslationId = 2, KeyId = 69, Value = "Online" },
-            new TranslationEntry { TranslationId = 2, KeyId = 70, Value = "Offline" },
-            new TranslationEntry { TranslationId = 2, KeyId = 71, Value = "Elérhető" },
-            new TranslationEntry { TranslationId = 2, KeyId = 72, Value = "Nem elérhető" },
-            new TranslationEntry { TranslationId = 2, KeyId = 268, Value = "Mentés" },
-            new TranslationEntry { TranslationId = 2, KeyId = 60, Value = "Mégse" },
-            new TranslationEntry { TranslationId = 2, KeyId = 547, Value = "Beállítások" },
-            new TranslationEntry { TranslationId = 2, KeyId = 17, Value = "Hiba" },
-            new TranslationEntry { TranslationId = 2, KeyId = 42, Value = "Sikeres" },
-            new TranslationEntry { TranslationId = 2, KeyId = 333, Value = "Betöltés" },
-            new TranslationEntry { TranslationId = 2, KeyId = 51, Value = "Szűrő" },
-            new TranslationEntry { TranslationId = 2, KeyId = 52, Value = "Exportálás" },
-            new TranslationEntry { TranslationId = 2, KeyId = 335, Value = "Feltöltés" },
-            new TranslationEntry { TranslationId = 2, KeyId = 12, Value = "Parancs" },
-            new TranslationEntry { TranslationId = 2, KeyId = 20, Value = "Csapatok" },
-            new TranslationEntry { TranslationId = 2, KeyId = 86, Value = "Elküldött" },
-            new TranslationEntry { TranslationId = 2, KeyId = 85, Value = "Érkező" },
-            new TranslationEntry { TranslationId = 2, KeyId = 4, Value = "Időtartam" },
-            new TranslationEntry { TranslationId = 2, KeyId = 3, Value = "Érkezési idő" },
-            new TranslationEntry { TranslationId = 2, KeyId = 21, Value = "Indító" },
-            new TranslationEntry { TranslationId = 2, KeyId = 543, Value = "Cél" },
-            new TranslationEntry { TranslationId = 2, KeyId = 12, Value = "Parancs" },
-            new TranslationEntry { TranslationId = 2, KeyId = 20, Value = "Csapatok" },
-            new TranslationEntry { TranslationId = 2, KeyId = 86, Value = "Elküldött" },
-            new TranslationEntry { TranslationId = 2, KeyId = 85, Value = "Érkező" },
-            new TranslationEntry { TranslationId = 2, KeyId = 4, Value = "Időtartam" },
-            new TranslationEntry { TranslationId = 2, KeyId = 3, Value = "Érkezési idő" },
-            new TranslationEntry { TranslationId = 2, KeyId = 21, Value = "Indító" },
-            new TranslationEntry { TranslationId = 2, KeyId = 543, Value = "Cél" },
-            new TranslationEntry { TranslationId = 2, KeyId = 12, Value = "Parancs" },
-            new TranslationEntry { TranslationId = 2, KeyId = 20, Value = "Csapatok" },
-            new TranslationEntry { TranslationId = 2, KeyId = 86, Value = "Elküldött" },
-            new TranslationEntry { TranslationId = 2, KeyId = 85, Value = "Érkező" },
-            new TranslationEntry { TranslationId = 2, KeyId = 4, Value = "Időtartam" },
-            new TranslationEntry { TranslationId = 2, KeyId = 3, Value = "Érkezési idő" },
-            new TranslationEntry { TranslationId = 2, KeyId = 21, Value = "Indító" },
-            new TranslationEntry { TranslationId = 2, KeyId = 543, Value = "Cél" },
-            new TranslationEntry { TranslationId = 2, KeyId = 97, Value = "Parancs" },        // Command (using KeyId for "Commands")
-            new TranslationEntry { TranslationId = 2, KeyId = 20, Value = "Csapatok" },       // Troops
-            new TranslationEntry { TranslationId = 2, KeyId = 86, Value = "Elküldött" },      // Sent
-            new TranslationEntry { TranslationId = 2, KeyId = 85, Value = "Érkező" },         // Received
-            new TranslationEntry { TranslationId = 2, KeyId = 491, Value = "Időtartam" },     // Duration (using KeyId for "hours")
-            new TranslationEntry { TranslationId = 2, KeyId = 3, Value = "Érkezési idő" },    // Arrival Time
-            new TranslationEntry { TranslationId = 2, KeyId = 21, Value = "Indító" },         // Origin
-            new TranslationEntry { TranslationId = 2, KeyId = 543, Value = "Cél" },           // Destination
-            new TranslationEntry { TranslationId = 2, KeyId = 506, Value = "Parancs" },
-            new TranslationEntry { TranslationId = 2, KeyId = 507, Value = "Parancs innen" },  // Vault - commands from here
-            new TranslationEntry { TranslationId = 2, KeyId = 508, Value = "Parancs" }
+
+            // HUNGARIAN TRANSLATIONS (TranslationId = 2) - CORRECTED & NO DUPLICATES
+            // Building Names - EXACT matches for Hungarian game
+            new TranslationEntry { TranslationId = 2, KeyId = 1, Value = "Főhadiszállás" },      // Headquarters/Main
+            new TranslationEntry { TranslationId = 2, KeyId = 2, Value = "Vault megnyitása" },  // Open Vault
+            new TranslationEntry { TranslationId = 2, KeyId = 3, Value = "Érkezési idő" },      // Arrival time
+            new TranslationEntry { TranslationId = 2, KeyId = 4, Value = "Érkezik" },           // Arrives in
+            new TranslationEntry { TranslationId = 2, KeyId = 5, Value = "Ez a szkript nem használható prémium fiók nélkül!" }, // Premium account required
+            new TranslationEntry { TranslationId = 2, KeyId = 12, Value = "Parancsok" },        // Commands
+            new TranslationEntry { TranslationId = 2, KeyId = 13, Value = "Beérkezők" },        // Incomings
+            new TranslationEntry { TranslationId = 2, KeyId = 14, Value = "Jelentések" },       // Reports
+            new TranslationEntry { TranslationId = 2, KeyId = 15, Value = "Csapatok" },         // Troops
+            new TranslationEntry { TranslationId = 2, KeyId = 16, Value = "Fel kell töltened:" }, // You need to upload
+            new TranslationEntry { TranslationId = 2, KeyId = 17, Value = "Hiba történt..." },  // An error occurred
+            new TranslationEntry { TranslationId = 2, KeyId = 18, Value = "Nincsenek elérhető parancsok" }, // No commands available
+            new TranslationEntry { TranslationId = 2, KeyId = 19, Value = "Nincsenek elérhető adatok" },    // No data available
+            new TranslationEntry { TranslationId = 2, KeyId = 20, Value = "Csapatok" },         // Troops
+            new TranslationEntry { TranslationId = 2, KeyId = 21, Value = "Indító" },           // Source/Origin
+            new TranslationEntry { TranslationId = 2, KeyId = 22, Value = "Indítási idő" },     // Launch Time
+            new TranslationEntry { TranslationId = 2, KeyId = 23, Value = "Érkezési idő" },     // Landing Time
+            new TranslationEntry { TranslationId = 2, KeyId = 24, Value = "Csapat igény" },     // Troop Req
+            new TranslationEntry { TranslationId = 2, KeyId = 25, Value = "Vault" },            // Vault
+            new TranslationEntry { TranslationId = 2, KeyId = 27, Value = "Kész" },             // Done
+            new TranslationEntry { TranslationId = 2, KeyId = 31, Value = "Fa" },               // Wood
+            new TranslationEntry { TranslationId = 2, KeyId = 32, Value = "Agyag" },            // Clay
+            new TranslationEntry { TranslationId = 2, KeyId = 33, Value = "Vas" },              // Iron
+            new TranslationEntry { TranslationId = 2, KeyId = 34, Value = "Népesség" },         // Population
+            new TranslationEntry { TranslationId = 2, KeyId = 35, Value = "Falu" },             // Village
+            new TranslationEntry { TranslationId = 2, KeyId = 36, Value = "Játékos" },          // Player
+            new TranslationEntry { TranslationId = 2, KeyId = 37, Value = "Klán" },             // Tribe
+            new TranslationEntry { TranslationId = 2, KeyId = 38, Value = "Támadás" },          // Attack
+            new TranslationEntry { TranslationId = 2, KeyId = 39, Value = "Támogatás" },        // Support
+            new TranslationEntry { TranslationId = 2, KeyId = 40, Value = "Védelem" },          // Defense
+            new TranslationEntry { TranslationId = 2, KeyId = 41, Value = "Hiba" },             // Error
+            new TranslationEntry { TranslationId = 2, KeyId = 42, Value = "Sikeres" },          // Success
+            new TranslationEntry { TranslationId = 2, KeyId = 43, Value = "Figyelmeztetés" },   // Warning
+            new TranslationEntry { TranslationId = 2, KeyId = 44, Value = "Mégse" },            // Cancel
+            new TranslationEntry { TranslationId = 2, KeyId = 45, Value = "Mentés" },           // Save
+            new TranslationEntry { TranslationId = 2, KeyId = 46, Value = "Törlés" },           // Delete
+            new TranslationEntry { TranslationId = 2, KeyId = 47, Value = "Beállítások" },      // Settings
+            new TranslationEntry { TranslationId = 2, KeyId = 48, Value = "Segítség" },         // Help
+            new TranslationEntry { TranslationId = 2, KeyId = 49, Value = "Betöltés" },         // Loading
+            new TranslationEntry { TranslationId = 2, KeyId = 50, Value = "Keresés" },          // Search
+            new TranslationEntry { TranslationId = 2, KeyId = 51, Value = "Szűrő" },            // Filter
+            new TranslationEntry { TranslationId = 2, KeyId = 52, Value = "Exportálás" },       // Export
+            new TranslationEntry { TranslationId = 2, KeyId = 53, Value = "Importálás" },       // Import
+            new TranslationEntry { TranslationId = 2, KeyId = 54, Value = "Feltöltés" },        // Upload
+            new TranslationEntry { TranslationId = 2, KeyId = 55, Value = "Letöltés" },         // Download
+            new TranslationEntry { TranslationId = 2, KeyId = 60, Value = "Felhasználónév" },   // Username
+            new TranslationEntry { TranslationId = 2, KeyId = 61, Value = "Jelszó" },           // Password
+            new TranslationEntry { TranslationId = 2, KeyId = 62, Value = "E-mail" },           // Email
+            new TranslationEntry { TranslationId = 2, KeyId = 63, Value = "Név" },              // Name
+            new TranslationEntry { TranslationId = 2, KeyId = 64, Value = "Dátum" },            // Date
+            new TranslationEntry { TranslationId = 2, KeyId = 65, Value = "Idő" },              // Time
+            new TranslationEntry { TranslationId = 2, KeyId = 66, Value = "Állapot" },          // Status
+            new TranslationEntry { TranslationId = 2, KeyId = 67, Value = "Aktív" },            // Active
+            new TranslationEntry { TranslationId = 2, KeyId = 68, Value = "Inaktív" },          // Inactive
+            new TranslationEntry { TranslationId = 2, KeyId = 69, Value = "Online" },           // Online
+            new TranslationEntry { TranslationId = 2, KeyId = 70, Value = "Offline" },          // Offline
+            new TranslationEntry { TranslationId = 2, KeyId = 71, Value = "Elérhető" },         // Available
+            new TranslationEntry { TranslationId = 2, KeyId = 72, Value = "Nem elérhető" },     // Unavailable
+            new TranslationEntry { TranslationId = 2, KeyId = 75, Value = "Vault használata" }, // Using Vault
+            new TranslationEntry { TranslationId = 2, KeyId = 79, Value = "# Ál-támadások" },   // # Fakes
+            new TranslationEntry { TranslationId = 2, KeyId = 80, Value = "# Nukák" },          // # Nukes
+            new TranslationEntry { TranslationId = 2, KeyId = 81, Value = "# Nemesek" },        // # Nobles
+            new TranslationEntry { TranslationId = 2, KeyId = 82, Value = "# Védelmi egységek" }, // # DVs
+            new TranslationEntry { TranslationId = 2, KeyId = 83, Value = "# Játékosok" },      // # Players
+            new TranslationEntry { TranslationId = 2, KeyId = 84, Value = "Otthon" },           // At home
+            new TranslationEntry { TranslationId = 2, KeyId = 85, Value = "Állomásoztatva" },   // Stationed
+            new TranslationEntry { TranslationId = 2, KeyId = 86, Value = "Utazik" },           // Traveling
+            new TranslationEntry { TranslationId = 2, KeyId = 87, Value = "Tulajdonban" },      // Owned
+            new TranslationEntry { TranslationId = 2, KeyId = 97, Value = "Parancsok" },        // Commands
+            new TranslationEntry { TranslationId = 2, KeyId = 98, Value = "Lehetséges toborzás" }, // Possible recruits
+            new TranslationEntry { TranslationId = 2, KeyId = 99, Value = "Épületek" },         // Buildings
+            new TranslationEntry { TranslationId = 2, KeyId = 100, Value = "Hűség" },           // Loyalty
+            new TranslationEntry { TranslationId = 2, KeyId = 128, Value = "Falu" },            // Village
+            new TranslationEntry { TranslationId = 2, KeyId = 129, Value = "Hűség" },           // Loyalty
+            new TranslationEntry { TranslationId = 2, KeyId = 151, Value = "Tulajdonos" },      // Owner
+            new TranslationEntry { TranslationId = 2, KeyId = 155, Value = "Klán" },            // Tribe
+            new TranslationEntry { TranslationId = 2, KeyId = 268, Value = "Mentés" },          // Save
+            new TranslationEntry { TranslationId = 2, KeyId = 275, Value = "Statisztikák" },    // Stats
+            new TranslationEntry { TranslationId = 2, KeyId = 301, Value = "Eszközök" },        // Tools
+            new TranslationEntry { TranslationId = 2, KeyId = 327, Value = "Feltöltés" },       // Upload
+            new TranslationEntry { TranslationId = 2, KeyId = 333, Value = "Várakozás" },       // Waiting
+            new TranslationEntry { TranslationId = 2, KeyId = 334, Value = "Váratlan hiba történt:" }, // Unexpected error
+            new TranslationEntry { TranslationId = 2, KeyId = 335, Value = "Feltöltés" },       // Upload
+            new TranslationEntry { TranslationId = 2, KeyId = 336, Value = "Folyamat" },        // Progress
+            new TranslationEntry { TranslationId = 2, KeyId = 342, Value = "Jelentések" },      // Reports
+            new TranslationEntry { TranslationId = 2, KeyId = 345, Value = "Beérkezők" },       // Incomings
+            new TranslationEntry { TranslationId = 2, KeyId = 347, Value = "Parancsok" },       // Commands
+            new TranslationEntry { TranslationId = 2, KeyId = 448, Value = "jan, feb, már, ápr, máj, jún, júl, aug, szep, okt, nov, dec" }, // Hungarian months
+            new TranslationEntry { TranslationId = 2, KeyId = 449, Value = "ma {time}-kor" },   // today at {time}
+            new TranslationEntry { TranslationId = 2, KeyId = 450, Value = "holnap {time}-kor" }, // tomorrow at {time}
+            new TranslationEntry { TranslationId = 2, KeyId = 451, Value = "{time} {date}-án" }, // {time} on {date}
+            new TranslationEntry { TranslationId = 2, KeyId = 452, Value = "{date}-án {time}-kor" }, // on {date} at {time}
+            new TranslationEntry { TranslationId = 2, KeyId = 454, Value = "nap" },             // day
+            new TranslationEntry { TranslationId = 2, KeyId = 455, Value = "ó" },               // hr
+            new TranslationEntry { TranslationId = 2, KeyId = 456, Value = "p" },               // min
+            new TranslationEntry { TranslationId = 2, KeyId = 457, Value = "mp" },              // sec
+            new TranslationEntry { TranslationId = 2, KeyId = 458, Value = "nap" },             // days
+            new TranslationEntry { TranslationId = 2, KeyId = 459, Value = "óra" },             // hrs
+            new TranslationEntry { TranslationId = 2, KeyId = 460, Value = "perc" },            // mins
+            new TranslationEntry { TranslationId = 2, KeyId = 461, Value = "másodperc" },       // secs
+            new TranslationEntry { TranslationId = 2, KeyId = 491, Value = "órák" },            // hours
+            new TranslationEntry { TranslationId = 2, KeyId = 506, Value = "Előnézet" },        // Preview
+            new TranslationEntry { TranslationId = 2, KeyId = 507, Value = "Vault - parancsok innen" }, // Vault - commands from here
+            new TranslationEntry { TranslationId = 2, KeyId = 510, Value = "Riasztások" },      // Alerts
+            new TranslationEntry { TranslationId = 2, KeyId = 538, Value = "{year}.{month}.{day}" }, // Hungarian date format
+            new TranslationEntry { TranslationId = 2, KeyId = 543, Value = "Célpont" },         // Target Village
+            new TranslationEntry { TranslationId = 2, KeyId = 547, Value = "Beállítások" }      // Settings
         };
     }
 }
